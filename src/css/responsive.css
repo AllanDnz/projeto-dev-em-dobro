@@ -1,0 +1,54 @@
+@media(max-width: 1280px){
+    body{
+        padding: 0 40px;
+    }
+}
+
+@media(max-width: 768px){
+    .informations{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .informations .description{
+        width: 60%;
+        text-align: center;
+    }
+
+    .social-medias .icon{
+        width: 30px;
+        filter: invert(1);
+        transition: 0.3s ease-in-out;
+    }
+}
+
+@media(max-width: 425px){
+    .informations .logo{
+        max-width: 300px;
+    }
+
+    .informations .description{
+        width: 100%;
+    }
+
+    .social-medias{
+        position: static;
+        min-height: auto;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .social-medias ul{
+        flex-direction: row;
+    }
+
+    .content{
+        min-height: 70vh;
+        gap: 50px;
+    }
+
+    body{
+        padding: 40px;
+    }
+}

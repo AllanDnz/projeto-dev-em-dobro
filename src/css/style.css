@@ -1,0 +1,144 @@
+body{
+    font-family: 'poppins', sans-serif;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+main::after{
+    content: '';
+    min-height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0.05926120448179273) 50%, rgba(0, 0, 0, 1) 90%);
+    z-index: -1;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-evenly;
+}
+
+
+.informations .logo{
+    max-width: 350px;
+    margin-bottom: 25px;
+    animation: slideContent 0.4s linear 0.4s backwards;
+}
+
+.informations .description{
+    width: 49%;
+    font-size: 24px;
+    color: white;
+    line-height: 30px;
+    animation: slideContent 1s linear 1s backwards;
+}
+
+.link-youtube{
+    color: darkturquoise;
+    font-style: italic;
+}
+
+@keyframes slideContent{0%
+    {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+}
+
+
+.roll{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.roll .button-roll{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: 1s;
+    opacity: 0.4;
+}
+
+.button-roll:hover{
+    background-color: white;
+    opacity: 1;
+}
+
+
+.social-medias{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.social-medias ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-medias .icon{
+    width: 50px;
+    filter: invert(1);
+    transition: 0.3s ease-in-out;
+}
+
+.social-medias .icon:hover{
+    transform: scale(1.2);
+}
+
+
+.scroll{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.scroll .image{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: none;
+    animation: changeImage 0.7s;
+}
+
+.scroll .image.active{
+    display: block;
+}
+
+@keyframes changeImage{
+    from{
+        opacity: 0.85;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.rodape{
+    align-items: center;
+    text-align: center;
+    margin: 0 3em 6em 3em;
+
+}
+
+.rodape__texto{
+    color: white;
+    margin: 1.5em 0;
+
+}
